@@ -138,18 +138,22 @@ export default modelExtend(model, {
       }
     },
     * beginWrite({payload}, {call, put, select}) {
-      console.log(payload);
-      
       const res = yield call(api.beginWriteTurnir, payload);
-      yield put({
-        type: "updateState",
-        payload: {turnirUserId: res.turnirUserId}
-      })
+      if (res.success) {
+        yield put({
+          type: 'updateState',
+          payload: {turnirUserId: res.turnirUserId}
+        })
+      }
     },
     * endWrite({payload}, {call, put, select}) {
-      console.log(payload);
-      
       const res = yield call(api.endWriteTurnir, payload);
+      if (res.success) {
+        yield put({
+          type: 'updateState',
+          payload: {wpm: res.wpm, showResult: true}
+        })
+      }
     },
     * rejectWpm({payload}, {call, put, select}) {
       const{tournamentInfo}=yield select(_=>_.tournament);
