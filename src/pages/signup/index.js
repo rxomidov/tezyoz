@@ -22,10 +22,11 @@ class Index extends Component {
       const rePassword = e.target.rePassword.value;
       const firstname = e.target.firstName.value;
       const lastname = e.target.lastName.value;
+      const phoneNumber = e.target.phoneNumber.value;
       if (password === rePassword) {
         dispatch({
           type: "signup/signUpNewUser",
-          payload: {login, password, firstname, lastname}
+          payload: {login, password, firstname, lastname, phoneNumber}
         })
       } else {
         toast.error("Takroriy parol xato kiritildi");
@@ -66,6 +67,10 @@ class Index extends Component {
             <FormGroup>
               <Input type="text" name="lastName" required className="bg-white font-family-regular"/>
               <Label className="font-family-light">Familiya</Label>
+            </FormGroup>
+            <FormGroup>
+              <Input type="text" name="phoneNumber" placeholder="+998 ## ### ## ##" required className="bg-white font-family-regular"/>
+              <Label className="font-family-light">Telefon raqam</Label>
             </FormGroup>
             <Button color="dark" disabled={isLoading} className="text-uppercase fs-18">{isLoading ?
               <Spinner size="sm" color="white" className="mr-1"/> : ""} Saqlash</Button>

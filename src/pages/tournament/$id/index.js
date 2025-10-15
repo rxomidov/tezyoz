@@ -297,10 +297,10 @@ class Index extends Component {
           tempTypedTexts[typedCount].type = "wrong";
         }
         this.socket.emit("sendWordTurnir", {word, turnirUserId});
-        // dispatch({
-        //   type: 'tournament/writeWord',
-        //   payload: {word, turnirUserId}
-        // })
+        dispatch({
+          type: 'tournament/writeWord',
+          payload: {word, turnirUserId}
+        })
         dispatch({
           type: "tournament/updateState",
           payload: {

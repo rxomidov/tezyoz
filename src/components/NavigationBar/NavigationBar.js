@@ -22,7 +22,7 @@ const NavigationBar = (props) => {
         <NavbarBrand>
           {props.pathname === '/' ?
             <div><Link to='/' className="position-relative d-block nav-brand"><img
-              src="/assets/images/logo-sign.png" alt=""/></Link>
+              src="/assets/images/logo-sign.png" alt=""/>1.1</Link>
             </div> :
             <Link to="/"><img src="/assets/images/logo.png" alt="" width="200"/></Link>}
         </NavbarBrand>

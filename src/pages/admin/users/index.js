@@ -157,8 +157,14 @@ class Index extends Component {
           <Col md='3'>
             <h5 className="font-family-medium fs-14 text-uppercase text-center mb-0">Familiyasi</h5>
           </Col>
-          <Col md='3'>
+          <Col md='2'>
             <h5 className="font-family-medium fs-14 text-uppercase text-center mb-0">Roli</h5>
+          </Col>
+          <Col md='2'>
+            <h5 className="font-family-medium fs-14 text-uppercase text-center mb-0">Telefon raqam</h5>
+          </Col>
+          <Col md='2'>
+            <h5 className="font-family-medium fs-14 text-uppercase text-center mb-0">Amallar</h5>
           </Col>
         </Row>
         {userList.map(user => (
@@ -169,10 +175,13 @@ class Index extends Component {
             <Col md='3' className="text-center">
               {user.lastname}
             </Col>
-            <Col md='3' className="text-center">
+            <Col md='2' className="text-center">
               {user.role}
             </Col>
-            <Col md='3' className="text-nowrap d-flex align-items-center justify-content-center">
+            <Col md='2' className="text-center">
+              {user.phoneNumber}
+            </Col>
+            <Col md='2' className="text-nowrap d-flex align-items-center justify-content-center">
               <ButtonGroup>
                 <Button onClick={() => action(user.id, user.isBlock)}>{user.isBlock ? 'UnBlock' : 'Block'}</Button>
               </ButtonGroup>

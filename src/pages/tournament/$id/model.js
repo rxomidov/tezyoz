@@ -137,6 +137,9 @@ export default modelExtend(model, {
         })
       }
     },
+    * writeWord({payload}, {call, put, select}) {
+      const res = yield call(api.writeWordTurnir, payload);
+    },
     * beginWrite({payload}, {call, put, select}) {
       const res = yield call(api.beginWriteTurnir, payload);
       if (res.success) {
