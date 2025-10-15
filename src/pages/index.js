@@ -77,7 +77,7 @@ class Index extends React.Component {
                 </div>
               </div>
               <div className="d-flex flex-column flex-md-row our-sponsor  justify-content-center position-relative">
-                <div className="d-none d-md-block text-center">
+                {/* <div className="d-none d-md-block text-center">
                   <p className="text-center text-white fs-14 font-family-regular">Loyiha O`zbekiston Respublikasi
                     Prezidentning <br/> 5 tashabbusi doirasida amalga oshirildi</p>
                   <Link><img src="/assets/images/five-way.png" width='79'/></Link>
@@ -87,7 +87,7 @@ class Index extends React.Component {
                   <a href='https://yoshlar.gov.uz/'><img src="/assets/images/yia-uz.svg" width='135'/></a>
                   <a href='https://yoshlarittifoqi.uz' style={{marginLeft:"30px"}}><img src="/assets/images/yi.png" width='135'/></a>
                   <a href='https://www.uzedu.uz' style={{marginLeft:"30px"}}><img src="/assets/images/xalq-talim.png" width='73'/></a>
-                </div>
+                </div> */}
                 {/*<div className="d-none d-md-block text-center ml-50">*/}
                 {/*  <p className="text-center text-white fs-14 font-family-regular">Bizning hamkor</p>*/}
                 {/*  <a href='https://www.uzedu.uz'><img src="/assets/images/xalq-talim.png" width='73'/></a>*/}

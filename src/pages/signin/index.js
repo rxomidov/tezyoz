@@ -49,6 +49,7 @@ class Index extends Component {
               isLoading: false
             }
           });
+          console.log("Xatolik!")
           // toast.error("Xatolik!")
         }
       }).catch(e => {
@@ -70,7 +71,8 @@ class Index extends Component {
         isLoading: false
       }
     });
-    toast.error("Xatolik!")
+    console.log(error)
+    // toast.error("Xatolik!")
   };
 
   render() {

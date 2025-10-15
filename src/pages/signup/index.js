@@ -69,8 +69,8 @@ class Index extends Component {
               <Label className="font-family-light">Familiya</Label>
             </FormGroup>
             <FormGroup>
-              <Input type="text" name="phoneNumber" placeholder="+998 ## ### ## ##" required className="bg-white font-family-regular"/>
-              <Label className="font-family-light">Telefon raqam</Label>
+              <Input type="email" name="phoneNumber" required className="bg-white font-family-regular"/>
+              <Label className="font-family-light">Email</Label>
             </FormGroup>
             <Button color="dark" disabled={isLoading} className="text-uppercase fs-18">{isLoading ?
               <Spinner size="sm" color="white" className="mr-1"/> : ""} Saqlash</Button>

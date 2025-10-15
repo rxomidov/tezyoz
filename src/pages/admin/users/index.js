@@ -161,7 +161,7 @@ class Index extends Component {
             <h5 className="font-family-medium fs-14 text-uppercase text-center mb-0">Roli</h5>
           </Col>
           <Col md='2'>
-            <h5 className="font-family-medium fs-14 text-uppercase text-center mb-0">Telefon raqam</h5>
+            <h5 className="font-family-medium fs-14 text-uppercase text-center mb-0">Email</h5>
           </Col>
           <Col md='2'>
             <h5 className="font-family-medium fs-14 text-uppercase text-center mb-0">Amallar</h5>
