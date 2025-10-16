@@ -22,32 +22,34 @@ class ParticipantComponent extends React.Component {
         payload: {userId}
       })
     }
+    console.log(this.props);
+    
     return (
       <Row className="fs-16 font-family-light winners">
         <Col xs="7">
           <Row>
-            <Col xs="2" className="pr-0 text-center">
+            <Col xs="2" className="pr-0 d-flex align-items-center text-center font-family-bold ">
               <span>{this.props.index + 1}</span>
             </Col>
-            <Col xs="10" className="d-flex">
+            <Col xs="10" className="d-flex align-items-center">
               <div className="winner-image"
                    style={{backgroundImage: this.props.user.user.image ? `url("${this.props.user.user.image.startsWith('https') ? "" : '/'}${this.props.user.user.image.replace('\\', '/')}")` : 'url("/assets/icons/user.svg")'}}/>
-              <div>{this.props.user.user.name}</div>
+              <div>
+                <div>{this.props.user.user.name}</div>
+                <div class="color-grey">{this.props.user.user.phoneNumber}</div>
+              </div>
             </Col>
           </Row>
         </Col>
         <Col xs="3">
-          <Row>
-            <Col xs="4">
+          <div class="d-flex justify-content-between align-items-center h-100 font-family-bold ">
+            <div xs="4" class="">
               <span>{this.props.user.wpm}</span>
-            </Col>
-            <Col xs="4">
-
-            </Col>
-            <Col xs="4">
+            </div>
+            <div xs="4">
               {this.props.isFirst ? <span className="icon icon-award"/> : ""}
-            </Col>
-          </Row>
+            </div>
+          </div>
         </Col>
         <Col xs="2">
           {user.role === 'Admin' ?
